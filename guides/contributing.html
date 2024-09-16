@@ -1,0 +1,301 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Contributing to the Handbook - Enspiral Handbook</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('light')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item "><a href="../index.html">Introduction</a></li><li class="chapter-item "><a href="../agreements/index.html">Agreements</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../agreements/board.html">Board Agreement</a></li><li class="chapter-item "><a href="../agreements/brand.html">Brand Agreement</a></li><li class="chapter-item "><a href="../agreements/catalyst.html">Catalyst Agreement</a></li><li class="chapter-item "><a href="../agreements/decisions.html">Decisions Agreement</a></li><li class="chapter-item "><a href="../agreements/diversity.html">Diversity Agreement</a></li><li class="chapter-item "><a href="../agreements/email_accounts_agreement.html">Email Accounts Agreement</a></li><li class="chapter-item "><a href="../agreements/financial.html">Financial Agreement</a></li><li class="chapter-item "><a href="../agreements/foundation-stewards.html">Foundation Stewards</a></li><li class="chapter-item "><a href="../agreements/harassment_and_abuse.html">Harassment And Abuse</a></li><li class="chapter-item "><a href="../agreements/nodes.html">Node Agreement</a></li><li class="chapter-item "><a href="../agreements/personal_conduct.html">Personal Conduct</a></li><li class="chapter-item "><a href="../agreements/pods.html">Pods Agreement</a></li><li class="chapter-item "><a href="../agreements/working_groups.html">Working Groups Agreement</a></li></ol></li><li class="chapter-item expanded "><a href="../guides/index.html">Guides</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../guides/assembly-sprints.html">Assembly Sprint</a></li><li class="chapter-item "><a href="../guides/blogging.html">Blogging</a></li><li class="chapter-item "><a href="../guides/conflict-resolution.html">Conflict Resolution</a></li><li class="chapter-item "><a href="../guides/comms_guidelines.html">Comms Guidelines</a></li><li class="chapter-item expanded "><a href="../guides/contributing.html" class="active">Contributing to the Handbook</a></li><li class="chapter-item "><a href="../guides/content-dusting.html">Content dusting</a></li><li class="chapter-item "><a href="../guides/email_accounts.html">Email accounts</a></li><li class="chapter-item "><a href="../guides/values.html">Enspiral Values</a></li><li class="chapter-item "><a href="../guides/github_for_beginners.html">Github for Beginners</a></li><li class="chapter-item "><a href="../guides/newcomers.html">Newcomers</a></li><li class="chapter-item "><a href="../guides/onboarding.html">Onboarding</a></li><li class="chapter-item "><a href="../guides/ops_processes.html">Ops processes</a></li><li class="chapter-item "><a href="../guides/pods.html">Pods</a></li><li class="chapter-item "><a href="../guides/project_kitchen.html">Project Kitchens</a></li><li class="chapter-item "><a href="../guides/projects_reports.html">Projects & Reports</a></li><li class="chapter-item "><a href="../guides/press.html">PR tips for humans</a></li><li class="chapter-item "><a href="../guides/research.html">Research</a></li><li class="chapter-item "><a href="../guides/retreats.html">Retreats</a></li><li class="chapter-item "><a href="../guides/songs.html">Songs</a></li><li class="chapter-item "><a href="../guides/workshop_patterns.html">Workshop Patterns</a></li></ol></li><li class="chapter-item "><a href="../nodes/index.html">Nodes</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../nodes/enspiral-europe.html">Enspiral Europe</a></li><li class="chapter-item "><a href="../nodes/enspiral-dao.html">Enspiral DAO</a></li><li class="chapter-item "><a href="../nodes/kumara.html">Kumara Node</a></li></ol></li><li class="chapter-item "><a href="../working-groups/index.html">Working Groups</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../working-groups/comms.html">Comms</a></li><li class="chapter-item "><a href="../working-groups/gatherings.html">Gatherings</a></li></ol></li><li class="chapter-item "><a href="../foundation/index.html">Enspiral Foundation Ltd</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../foundation/constitution.html">Constitution</a></li><li class="chapter-item "><a href="../foundation/board.html">Board of Directors</a></li><li class="chapter-item "><a href="../foundation/ops-scope.html">Ops Scope</a></li><li class="chapter-item "><a href="../foundation/comms-role.html">Comms Role Scope</a></li></ol></li><li class="chapter-item "><a href="../money/index.html">Money</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../money/collabfunding.html">Collaborative Funding</a></li><li class="chapter-item "><a href="../money/contributing-money.html">Contributing Money</a></li><li class="chapter-item "><a href="../money/financial_transparency.html">Financial Transparency</a></li></ol></li><li class="chapter-item "><a href="../ventures.html">Ventures</a></li><li class="chapter-item "><a href="../resources.html">Resources</a></li><li class="chapter-item "><a href="../archive/index.html">Archive</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Enspiral Handbook</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/enspiral/handbook/edit/main/guides/contributing.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="contributing-to-the-handbook"><a class="header" href="#contributing-to-the-handbook">Contributing to the Handbook</a></h1>
+<h2 id="getting-started"><a class="header" href="#getting-started">Getting started</a></h2>
+<p>This Handbook is like a wiki, maintained by everyone in the community: we need your help! Enspiral Contributors: join the #handbook channel on Slack and we can support you to get started.</p>
+<h2 id="the-github-method"><a class="header" href="#the-github-method">The Github Method</a></h2>
+<p><a href="https://en.wikipedia.org/wiki/GitHub">Github</a> is a platform that is mostly used by developers to manage software projects: it allows many contributors to all work on a single project without stepping on each other's toes. It has a system for storing files and proposing changes to them in a managed way. (This is based on an amazing free technology called git.)</p>
+<p>All the files that make up this handbook live in a Github "repository" (often called a "repo") : <a href="https://github.com/enspiral/handbook">https://github.com/enspiral/handbook</a></p>
+<p><strong>Check the</strong> <a href="../guides/github_for_beginners.html"><strong>Github for Beginners</strong></a> <strong>guide if you want to learn more.</strong></p>
+<p>If you have a Github account, you can draft another version of the handbook and let people comment on your draft. You make a "pull request" to request that repo maintainers merge your changes into the canonical version of the handbook, the "master" version. If you don't have an account <a href="https://github.com/join?source=header-home">click here</a> to set one up. Once you have an account, post your github user ID in the #enspiral_help channel in Slack and ask for someone to add you to Enspiral' github account.</p>
+<p>To change an agreement you need to follow the process outlined in the <a href="../agreements/decisions.html">decisions agreement</a>. These agreements govern our community so they can only be changed with community input.</p>
+<p>If you're making a small edit like fixing a typo, or adding a guide, the pull request is a good place to start.</p>
+<h3 id="heres-how-to-propose-a-change"><a class="header" href="#heres-how-to-propose-a-change">Here's how to propose a change:</a></h3>
+<p>Watch <a href="https://www.youtube.com/watch?v=zVvda3ci4w4">the quick demo video</a>, or read on:</p>
+<h4 id="step-1"><a class="header" href="#step-1">Step 1</a></h4>
+<p>First, go to the <a href="https://github.com/enspiral/handbook">enspiral/handbook</a> Github repo (you'll need to be a logged Github user). Click "Fork" to make your own copy of the repo. It'll ask for a destination: just select your personal account.</p>
+<p><img src="../.gitbook/assets/contributing-1.png" alt="" /></p>
+<h4 id="step-2"><a class="header" href="#step-2">Step 2</a></h4>
+<p>Now you're on your own version of the handbook. You can add files with "Create new file" or "Upload files". To edit an existing file, select it from the list, then click the little pencil icon near the top right.</p>
+<p><img src="../.gitbook/assets/contributing-2.png" alt="" /></p>
+<h4 id="step-3"><a class="header" href="#step-3">Step 3</a></h4>
+<p>Now you're in a file editor, so you can make any changes you want. We're using <a href="http://loomio.org/markdown">markdown</a> to add formatting, links, images, etc. You can see how this markdown formatting will render by clicking "Preview changes". Text outlined in red is the stuff you're proposing to remove, and green means you're proposing an addition. Hit "Commit changes" to finish editing.</p>
+<p><img src="../.gitbook/assets/contributing-3.png" alt="" /></p>
+<h4 id="step-4"><a class="header" href="#step-4">Step 4</a></h4>
+<p>Once you've added and edited all the files required to make a useful change to the handbook, go back to your repo (click <code>yourGithubUsername/handbook</code> at the top of the page) and click "New pull request".</p>
+<p><img src="../.gitbook/assets/contributing-4.png" alt="" /></p>
+<h4 id="step-5"><a class="header" href="#step-5">Step 5</a></h4>
+<p>This will take you to the <code>enspiral/handbook</code> repo, and give you a preview of the whole set of changes you are proposing. If it looks right, then click "Create pull request" and fill in a title and details for the pull request, so people know at a glance what is included. Finally, you need to click "Create pull request" once more, which will make your proposal final and notify the repo maintainers that you want to make a change.</p>
+<p><img src="../.gitbook/assets/contributing-5.png" alt="" /></p>
+<h2 id="handbook-maintainers"><a class="header" href="#handbook-maintainers">Handbook Maintainers</a></h2>
+<p>Handbook maintainers aim to merge pull requests within 1-2 days. As a general guideline a maintainer does not merge in their own branches or pull requests. If they cannot get hold of another maintainer they may merge their own branches.</p>
+<p>To improve communications and understanding, its useful for your proposed changes to reference an <a href="https://github.com/enspiral/improvements/issues">underlying issue</a> that your changes aim to solve.</p>
+<p>If you want to become a maintainer ask @joshuavial to give to maintainer rights.</p>
+<h3 id="code-to-sync-github-and-gitbooks"><a class="header" href="#code-to-sync-github-and-gitbooks">Code to sync github and gitbooks</a></h3>
+<pre><code class="language-text">## prereqs
+rsync
+python3
+git
+gitbook-cli
+​
+in the md/ folder, run gitbook install
+​
+## Test
+./serve.sh
+http://localhost:8000/
+​
+​git fetch origin
+git checkout gh-pages
+git merge master
+./build.sh
+
+## if you need better error messages, try gitbook build .
+
+git add .
+git commit -m "whatevers happened"
+git push origin gh-pages
+
+## if you need to make edits, do this on another branch.
+## just use gh-pages to build the html version of the book
+</code></pre>
+<h2 id="improvements-and-disagreements"><a class="header" href="#improvements-and-disagreements">Improvements and Disagreements</a></h2>
+<p>If you think the content in the handbook is inaccurate or could be improved follow the process above to submit your own changes. The contribution process may reveal differences of opinion. In these cases, try to understand each others perspective. Consider starting a Loomio discussion to find agreement.</p>
+<h2 id="the-gitbooks-method"><a class="header" href="#the-gitbooks-method">The Gitbooks Method</a></h2>
+<p>You can also edit the handbook using the <a href="https://www.gitbook.com/editor">Gitbooks Editor</a>. If you know how to do that, why don't you go ahead and update this page to explain it to someone else :)</p>
+<h2 id="updating-the-table-of-contentsmenu"><a class="header" href="#updating-the-table-of-contentsmenu">Updating the Table of Contents/Menu</a></h2>
+<p>You can update the menu by editing the <code>SUMMARY.md</code> file.</p>
+<h2 id="previewing-changes-before-merging-a-pull-request"><a class="header" href="#previewing-changes-before-merging-a-pull-request">Previewing changes before merging a pull request</a></h2>
+<p>Gitbook automatically renders all branches on Github, so you can preview what a pull request will look like before merging it.</p>
+<p>To do this, go to the <a href="https://www.gitbook.com/book/enspiral/enspiral-handbook/activity">Activity tab</a> -&gt; switch branch -&gt; view latest build -&gt; read online.</p>
+<p><img src="http://g.recordit.co/VKyB3IqBgc.gif" alt="" /></p>
+<h2 id="gitbook-build-errors"><a class="header" href="#gitbook-build-errors">Gitbook build errors</a></h2>
+<p>If you are getting an error running <code>gitbook build</code> or <code>gitbook serve</code> you may need to fix one of the dependencies as outlined in <a href="https://stackoverflow.com/questions/64211386/gitbook-cli-install-error-typeerror-cb-apply-is-not-a-function-inside-graceful">this stack overflow issue</a></p>
+<p>tl;dr - gitbook-cli is out of date and graceful-fs needs to be pinned to 4.2.0</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../guides/comms_guidelines.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../guides/content-dusting.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../guides/comms_guidelines.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../guides/content-dusting.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

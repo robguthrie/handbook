@@ -1,0 +1,308 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Working Groups Agreement - Enspiral Handbook</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('light')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item "><a href="../index.html">Introduction</a></li><li class="chapter-item expanded "><a href="../agreements/index.html">Agreements</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../agreements/board.html">Board Agreement</a></li><li class="chapter-item "><a href="../agreements/brand.html">Brand Agreement</a></li><li class="chapter-item "><a href="../agreements/catalyst.html">Catalyst Agreement</a></li><li class="chapter-item "><a href="../agreements/decisions.html">Decisions Agreement</a></li><li class="chapter-item "><a href="../agreements/diversity.html">Diversity Agreement</a></li><li class="chapter-item "><a href="../agreements/email_accounts_agreement.html">Email Accounts Agreement</a></li><li class="chapter-item "><a href="../agreements/financial.html">Financial Agreement</a></li><li class="chapter-item "><a href="../agreements/foundation-stewards.html">Foundation Stewards</a></li><li class="chapter-item "><a href="../agreements/harassment_and_abuse.html">Harassment And Abuse</a></li><li class="chapter-item "><a href="../agreements/nodes.html">Node Agreement</a></li><li class="chapter-item "><a href="../agreements/personal_conduct.html">Personal Conduct</a></li><li class="chapter-item "><a href="../agreements/pods.html">Pods Agreement</a></li><li class="chapter-item expanded "><a href="../agreements/working_groups.html" class="active">Working Groups Agreement</a></li></ol></li><li class="chapter-item "><a href="../guides/index.html">Guides</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../guides/assembly-sprints.html">Assembly Sprint</a></li><li class="chapter-item "><a href="../guides/blogging.html">Blogging</a></li><li class="chapter-item "><a href="../guides/conflict-resolution.html">Conflict Resolution</a></li><li class="chapter-item "><a href="../guides/comms_guidelines.html">Comms Guidelines</a></li><li class="chapter-item "><a href="../guides/contributing.html">Contributing to the Handbook</a></li><li class="chapter-item "><a href="../guides/content-dusting.html">Content dusting</a></li><li class="chapter-item "><a href="../guides/email_accounts.html">Email accounts</a></li><li class="chapter-item "><a href="../guides/values.html">Enspiral Values</a></li><li class="chapter-item "><a href="../guides/github_for_beginners.html">Github for Beginners</a></li><li class="chapter-item "><a href="../guides/newcomers.html">Newcomers</a></li><li class="chapter-item "><a href="../guides/onboarding.html">Onboarding</a></li><li class="chapter-item "><a href="../guides/ops_processes.html">Ops processes</a></li><li class="chapter-item "><a href="../guides/pods.html">Pods</a></li><li class="chapter-item "><a href="../guides/project_kitchen.html">Project Kitchens</a></li><li class="chapter-item "><a href="../guides/projects_reports.html">Projects & Reports</a></li><li class="chapter-item "><a href="../guides/press.html">PR tips for humans</a></li><li class="chapter-item "><a href="../guides/research.html">Research</a></li><li class="chapter-item "><a href="../guides/retreats.html">Retreats</a></li><li class="chapter-item "><a href="../guides/songs.html">Songs</a></li><li class="chapter-item "><a href="../guides/workshop_patterns.html">Workshop Patterns</a></li></ol></li><li class="chapter-item "><a href="../nodes/index.html">Nodes</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../nodes/enspiral-europe.html">Enspiral Europe</a></li><li class="chapter-item "><a href="../nodes/enspiral-dao.html">Enspiral DAO</a></li><li class="chapter-item "><a href="../nodes/kumara.html">Kumara Node</a></li></ol></li><li class="chapter-item "><a href="../working-groups/index.html">Working Groups</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../working-groups/comms.html">Comms</a></li><li class="chapter-item "><a href="../working-groups/gatherings.html">Gatherings</a></li></ol></li><li class="chapter-item "><a href="../foundation/index.html">Enspiral Foundation Ltd</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../foundation/constitution.html">Constitution</a></li><li class="chapter-item "><a href="../foundation/board.html">Board of Directors</a></li><li class="chapter-item "><a href="../foundation/ops-scope.html">Ops Scope</a></li><li class="chapter-item "><a href="../foundation/comms-role.html">Comms Role Scope</a></li></ol></li><li class="chapter-item "><a href="../money/index.html">Money</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../money/collabfunding.html">Collaborative Funding</a></li><li class="chapter-item "><a href="../money/contributing-money.html">Contributing Money</a></li><li class="chapter-item "><a href="../money/financial_transparency.html">Financial Transparency</a></li></ol></li><li class="chapter-item "><a href="../ventures.html">Ventures</a></li><li class="chapter-item "><a href="../resources.html">Resources</a></li><li class="chapter-item "><a href="../archive/index.html">Archive</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Enspiral Handbook</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/enspiral/handbook/edit/main/agreements/working_groups.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="working-groups-agreement"><a class="header" href="#working-groups-agreement">Working Groups Agreement</a></h1>
+<p>{% hint style="info" %}</p>
+<p>There are currently no catalysts in Enspiral. Formal WG approval process in this agreement should be updated.</p>
+<p>{% endhint %}</p>
+<p><a href="https://www.loomio.org/p/vksIn6z0/we-approve-the-working-group-agreement"><em>Approved: April 2019</em></a></p>
+<p>Working groups are the way we build and maintain Enspiral, if Enspiral were a body, working groups would be the organs.</p>
+<h2 id="types-of-working-groups"><a class="header" href="#types-of-working-groups">Types of Working Groups</a></h2>
+<p>There are three types of working groups: informal, formal and financially enabled.</p>
+<h3 id="informal"><a class="header" href="#informal">Informal</a></h3>
+<p>An informal working group is the easiest to start, it requires no approval and only needs at least two members to qualify as a working group.</p>
+<ul>
+<li>Any two people can start an informal working group for any purpose they define.</li>
+<li>It can be for a short lived project or long term mission.</li>
+<li>The working group can set its own rules for who can join.</li>
+</ul>
+<h3 id="formal"><a class="header" href="#formal">Formal</a></h3>
+<p>A formal working group is a more robust working group with additional powers and responsibilities.</p>
+<ul>
+<li>Catalyst approval is required to create a formal working group.</li>
+<li>Only formal working groups can be delegated responsibilities or powers in an Agreement.</li>
+</ul>
+<h3 id="financial-enabled"><a class="header" href="#financial-enabled">Financial Enabled</a></h3>
+<p>A financially enabled working group is able to use the Enspiral Foundation Ltd as a financial and legal platform. They can use the company to receive, spend and hold money and enter into legal contracts.</p>
+<ul>
+<li>Board approval is required to create a financially enabled working group.</li>
+<li>Financially enabled working groups operate an autonomous business unit within the Enspiral Foundation Ltd.</li>
+</ul>
+<h2 id="responsibilities-and-powers"><a class="header" href="#responsibilities-and-powers">Responsibilities and powers</a></h2>
+<h3 id="all-working-groups"><a class="header" href="#all-working-groups">All Working Groups</a></h3>
+<p>Be awesome, look after your members, do good work, have fun, clean up after yourselves.</p>
+<h3 id="formal-working-group"><a class="header" href="#formal-working-group">Formal Working Group</a></h3>
+<p>Responsibilities and powers as delegated by agreement.</p>
+<h3 id="financially-enabled-working-group"><a class="header" href="#financially-enabled-working-group">Financially Enabled Working Group</a></h3>
+<p><strong>Responsibilities</strong></p>
+<ul>
+<li>Create a budget and keep it up to date.</li>
+<li>Prepare and publish financial reports.</li>
+<li>Only enter into contracts that have been approved by the board.</li>
+<li>Work with the Enspiral Foundation book keepers to keep its accounts in order.</li>
+<li>Provide information requested by the board or Catalysts in a timely manner.</li>
+<li>Don’t create extra work for Catalysts.</li>
+<li>Don’t create headaches for the board.</li>
+</ul>
+<p><strong>Powers</strong></p>
+<ul>
+<li>Enter into (pre-approved) legal contracts on behalf of the Enspiral Foundation.</li>
+<li>Receive funds from collaborative funding processes directly to its business unit.</li>
+</ul>
+<h3 id="catalysts"><a class="header" href="#catalysts">Catalysts</a></h3>
+<p>Catalysts are the friendly gatekeeper for formalizing a working group.</p>
+<p><strong>Responsibilities</strong></p>
+<ul>
+<li>Catalyse a healthy working group ecosystem.</li>
+<li>Maintain an up to date list of all working groups.</li>
+<li>Create and publish criteria for being a formal working group.</li>
+<li>Periodically conduct health checks of all working groups.</li>
+<li>Support and train financially enabled working group members to use Enspiral Foundation systems and processes.</li>
+<li>Act as a backstop for financially enabled working groups and intervene at the boards request if they are disbanded.</li>
+</ul>
+<p><strong>Powers</strong></p>
+<ul>
+<li>Approve / reject requests to become a formal working group.</li>
+<li>Disband a dysfunctional formal working group.</li>
+</ul>
+<h3 id="board"><a class="header" href="#board">Board</a></h3>
+<p>The board is the friendly gatekeeper for financially enabled working groups.</p>
+<p><strong>Responsibilities</strong></p>
+<ul>
+<li>Ensure the Enspiral Foundation systems and processes are able to accomodate financially enabled working groups.</li>
+<li>Create and publish the criteria for a financially enabled working group.</li>
+<li>Approve / reject legal contracts for use by financial enabled working groups.</li>
+<li>Ensure each financial working group is solvent and any mismanagement does not impact other working groups or core funds.</li>
+</ul>
+<p><strong>Powers</strong></p>
+<ul>
+<li>Approve / reject requests to become a financially enabled working group.</li>
+<li>Disband a financially enabled working group and appoint someone(s) to unwind the business unit.</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../agreements/pods.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../guides/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../agreements/pods.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../guides/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

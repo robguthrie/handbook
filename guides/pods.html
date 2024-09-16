@@ -1,0 +1,353 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Pods - Enspiral Handbook</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('light')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item "><a href="../index.html">Introduction</a></li><li class="chapter-item "><a href="../agreements/index.html">Agreements</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../agreements/board.html">Board Agreement</a></li><li class="chapter-item "><a href="../agreements/brand.html">Brand Agreement</a></li><li class="chapter-item "><a href="../agreements/catalyst.html">Catalyst Agreement</a></li><li class="chapter-item "><a href="../agreements/decisions.html">Decisions Agreement</a></li><li class="chapter-item "><a href="../agreements/diversity.html">Diversity Agreement</a></li><li class="chapter-item "><a href="../agreements/email_accounts_agreement.html">Email Accounts Agreement</a></li><li class="chapter-item "><a href="../agreements/financial.html">Financial Agreement</a></li><li class="chapter-item "><a href="../agreements/foundation-stewards.html">Foundation Stewards</a></li><li class="chapter-item "><a href="../agreements/harassment_and_abuse.html">Harassment And Abuse</a></li><li class="chapter-item "><a href="../agreements/nodes.html">Node Agreement</a></li><li class="chapter-item "><a href="../agreements/personal_conduct.html">Personal Conduct</a></li><li class="chapter-item "><a href="../agreements/pods.html">Pods Agreement</a></li><li class="chapter-item "><a href="../agreements/working_groups.html">Working Groups Agreement</a></li></ol></li><li class="chapter-item expanded "><a href="../guides/index.html">Guides</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../guides/assembly-sprints.html">Assembly Sprint</a></li><li class="chapter-item "><a href="../guides/blogging.html">Blogging</a></li><li class="chapter-item "><a href="../guides/conflict-resolution.html">Conflict Resolution</a></li><li class="chapter-item "><a href="../guides/comms_guidelines.html">Comms Guidelines</a></li><li class="chapter-item "><a href="../guides/contributing.html">Contributing to the Handbook</a></li><li class="chapter-item "><a href="../guides/content-dusting.html">Content dusting</a></li><li class="chapter-item "><a href="../guides/email_accounts.html">Email accounts</a></li><li class="chapter-item "><a href="../guides/values.html">Enspiral Values</a></li><li class="chapter-item "><a href="../guides/github_for_beginners.html">Github for Beginners</a></li><li class="chapter-item "><a href="../guides/newcomers.html">Newcomers</a></li><li class="chapter-item "><a href="../guides/onboarding.html">Onboarding</a></li><li class="chapter-item "><a href="../guides/ops_processes.html">Ops processes</a></li><li class="chapter-item expanded "><a href="../guides/pods.html" class="active">Pods</a></li><li class="chapter-item "><a href="../guides/project_kitchen.html">Project Kitchens</a></li><li class="chapter-item "><a href="../guides/projects_reports.html">Projects & Reports</a></li><li class="chapter-item "><a href="../guides/press.html">PR tips for humans</a></li><li class="chapter-item "><a href="../guides/research.html">Research</a></li><li class="chapter-item "><a href="../guides/retreats.html">Retreats</a></li><li class="chapter-item "><a href="../guides/songs.html">Songs</a></li><li class="chapter-item "><a href="../guides/workshop_patterns.html">Workshop Patterns</a></li></ol></li><li class="chapter-item "><a href="../nodes/index.html">Nodes</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../nodes/enspiral-europe.html">Enspiral Europe</a></li><li class="chapter-item "><a href="../nodes/enspiral-dao.html">Enspiral DAO</a></li><li class="chapter-item "><a href="../nodes/kumara.html">Kumara Node</a></li></ol></li><li class="chapter-item "><a href="../working-groups/index.html">Working Groups</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../working-groups/comms.html">Comms</a></li><li class="chapter-item "><a href="../working-groups/gatherings.html">Gatherings</a></li></ol></li><li class="chapter-item "><a href="../foundation/index.html">Enspiral Foundation Ltd</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../foundation/constitution.html">Constitution</a></li><li class="chapter-item "><a href="../foundation/board.html">Board of Directors</a></li><li class="chapter-item "><a href="../foundation/ops-scope.html">Ops Scope</a></li><li class="chapter-item "><a href="../foundation/comms-role.html">Comms Role Scope</a></li></ol></li><li class="chapter-item "><a href="../money/index.html">Money</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../money/collabfunding.html">Collaborative Funding</a></li><li class="chapter-item "><a href="../money/contributing-money.html">Contributing Money</a></li><li class="chapter-item "><a href="../money/financial_transparency.html">Financial Transparency</a></li></ol></li><li class="chapter-item "><a href="../ventures.html">Ventures</a></li><li class="chapter-item "><a href="../resources.html">Resources</a></li><li class="chapter-item "><a href="../archive/index.html">Archive</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Enspiral Handbook</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/enspiral/handbook/edit/main/guides/pods.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="pods"><a class="header" href="#pods">Pods</a></h1>
+<h2 id="what-is-a-pod"><a class="header" href="#what-is-a-pod">What is a pod?</a></h2>
+<p>Pods are small groups of people (4 to 5 is suggested) formed by members and contributors of Enspiral. These groups can support us to build relationships across the network – especially with those further from the center – supporting more people to be ‘seen’ and to experience mutual support and care.</p>
+<h2 id="forming-a-pod"><a class="header" href="#forming-a-pod">Forming a pod</a></h2>
+<p>A pod is formed by a few people coming together around an <em>intention</em> and some <em>principles</em>. An initial invitation is made by a <em>caller,</em> who also coordinates the first video call or meeting.</p>
+<p>The invitation will often come with the seed of an <em>intention</em>. It could also suggest a <em>format</em> that the group may choose to follow, or some <em>principles</em> and <em>rituals</em> to use through their calls.</p>
+<p>In summary:</p>
+<ul>
+<li>The <strong>intention</strong> clearly states the common intent bringing a group together (e.g. studying a topic together or going through a self-development methodology).</li>
+<li><strong>Principles</strong> are the set of rules, protocols and values that define the culture of the pod. You might consider principles around context, meeting rhythm as well as facilitation and hosting duties.</li>
+<li><strong>Rituals</strong> are practices that help boost the interactivity of your calls. It could be as simple as holding a minute of silence at the start of the call.</li>
+<li>A <strong>format</strong> gives your pod a direction and structure over time. It might specify a set of rituals for each session (of a set) or perhaps even activities that participants do in-between calls.</li>
+</ul>
+<p>You can refer to the <a href="web/enspiral-handbook-2023/guides/pods.html#list-of-rituals">List of Rituals</a> and the <a href="web/enspiral-handbook-2023/guides/pods.html#list-of-formats">List of Formats</a> for inspiration on what to propose to your group. The next section highlights key <em>principles</em> intended to increase the resilience of your pod and the broader set of pods across Enspiral… we're in this to grow (and compost) together!</p>
+<h2 id="running-a-pod"><a class="header" href="#running-a-pod">Running a pod</a></h2>
+<p>There are key areas where <em>principles</em> might be specifically important for all groups:</p>
+<p><strong>Acknowledging Boundaries</strong> – What are you up for? And what are you not up for? Talk about your Norms and Boundaries. Eg, being respectful with each other, setting a confidentiality agreement, etc.</p>
+<p><strong>Cadence</strong> - How often are you meeting? …for how long? Some pods do it every week for a while and then change to longer cadence, fortnightly or monthly. Many meet from either an hour up to an hour and a half. It is up to your pod members to decide.</p>
+<blockquote>
+<p>⚠️ Having a regular time (eg, first Monday of the month) makes it significantly easier to get together. If you don't have a regular time to meet, dedicating a few minutes at the end of each meeting to schedule the next one makes logistics easier and more effective.</p>
+</blockquote>
+<p><strong>Presence</strong> - Agree on the minimum number of participants you want to be present to go ahead with a meeting: Do you want everyone to be present every time? Can you go ahead with a meeting if someone can’t make it?</p>
+<p><strong>Cycles</strong> - When do you stop? When do you reflect? Start with the end in mind or with a moment when you will stop and reflect (also see <a href="web/enspiral-handbook-2023/guides/pods.html#continuous-improvement"><em>Retrospective</em></a>)</p>
+<p><strong>Hosting Duties</strong> - Should facilitation ‘rotate’ amongst your pod’s members, with a different person attending to the clock, agenda, or people’s speaking time each session? Should you take turns to decide who's in charge of inviting people of the next meeting and providing a link for them to join?</p>
+<p><strong>Setup Concerns</strong> - Some pods may want to commit to certain basics, such as being able to see one another’s faces.</p>
+<blockquote>
+<p>⚠️ Starting a slack channel or Loomio group (especially if not everyone is in Enspiral’s Slack) will help everyone know where to find key info and updates.</p>
+</blockquote>
+<p><strong>Naming Your Elders</strong> - What’s the lineage that you are following? Who are you emulating or modelling after?</p>
+<h2 id="continuous-improvement"><a class="header" href="#continuous-improvement">Continuous improvement</a></h2>
+<p>There are two ways you can help make your pod experience increasingly useful to its members and others:</p>
+<p><strong>Retrospective</strong> - Agree on a time to stop and reflect on how is the pod working for each member: What is working well? What can be better? What are we going to change? You can use that reflection point as a good place to decide if you stop or if you keep on going, and how.</p>
+<blockquote>
+<p>ℹ️ For an easy 'how to,' go to the Retro section <a href="web/enspiral-handbook-2023/guides/pods.html#list-of-rituals">under “Rituals”</a></p>
+</blockquote>
+<p><strong>Sharing learnings</strong> - Share what you learn in your Retro with the network so we can all learn together. We will have shared learning prompts with the network every 3 months, and an open thread where everyone can post what have they learned from specific Formats and Rituals.</p>
+<h2 id="the-pods-process-at-enspiral"><a class="header" href="#the-pods-process-at-enspiral">The pods process at Enspiral</a></h2>
+<ul>
+<li>Every 4-6 months the pods working group will put a callout to the network for new pods formation.</li>
+<li>People interested in being Callers or joining a new pod will opt-in, share what they're interested in, and find their pod members in compatible timezones.</li>
+<li>Pods will form around the Intention, Principles and Format they choose, based on what the people in them agree on.</li>
+<li>In advance of the next round, the pod working group will start a thread to encourage pods to do Retrospectives and collect and share lessons for the whole network.</li>
+<li>Once a pod ends we will encourage people exiting a pod to either join another pod or become caller for new ones.</li>
+</ul>
+<h2 id="list-of-formats"><a class="header" href="#list-of-formats">List of Formats</a></h2>
+<p><a href="https://docs.google.com/document/d/1IUXBpZJas2MRNlrKDu4KBivZjBw67RQ9o7accovv4fU/edit?usp=sharing"><strong>Care Pod</strong></a> - A format based on Intentional Change Theory <em>[click to expand]</em></p>
+<ul>
+<li>Personal-professional development centered around Intentional Change Theory (ICT), a process for achieving sustained desired change in oneself alongside peers. ICT itself is a powerful pattern that can be approached in a variety of ways. Feel free to create some exercises or agendas from scratch or use the ones presented here. Four pods reported they had good experiences using the exercises outlined in this <a href="https://docs.google.com/document/d/1IUXBpZJas2MRNlrKDu4KBivZjBw67RQ9o7accovv4fU/edit?usp=sharing">Format’s documentation</a>.</li>
+</ul>
+<p><a href="https://drive.google.com/drive/folders/106sDS6JRDpS64Yp0tozzI2VNJyIF67vq?usp=sharing"><strong>Peer Incubator</strong></a> - Personal-professional development that is more project-oriented than the “Care Pod” format. <em>[click to expand]</em></p>
+<ul>
+<li>The documentation of <a href="https://drive.google.com/open?id=1Zr1R8g__xJNQhYKgnVJwCf9v0nDaaPn5K6o6MRy7XeA">how the very first one evolved</a> can give a picture of how to bring a pod together and evolve your own Format along with some starter material, prompts, and agendas.</li>
+<li>There are examples of <a href="https://drive.google.com/open?id=1ZSa-CL21vKCHp2FVJMkDy7nZLSb0PGBcXu1rFl8AwZs">combining this Format with the exercises from Care Pod (ICT)</a>, and also a <a href="https://docs.google.com/document/d/1E0Bt0bSRpARKgMNRYWboIELbSTurfPMedHOWDYUCHIo/edit?usp=sharing">super simple, reusable agenda</a> that is just a combination of the Project Kitchen &amp; Share-and-tell Rituals (see below).</li>
+<li>Find all the <a href="https://drive.google.com/drive/folders/106sDS6JRDpS64Yp0tozzI2VNJyIF67vq?usp=sharing">documentation about this format here</a>.</li>
+</ul>
+<p><strong>Free Format</strong> - Less structured, build your own… <em>[click to expand]</em></p>
+<ul>
+<li>While a Shared intention and a few Principles or key protocols are recommended, some pods may want to lean into emergence and arrive with a barebones agenda or none at all. Whatever the case, you might like to use one or more of the Rituals below, or to plan and build a Format by remixing those presented above.</li>
+</ul>
+<h2 id="list-of-rituals"><a class="header" href="#list-of-rituals">List of Rituals</a></h2>
+<p><strong>Project Kitchens</strong> - A practical, project-oriented exercise. <em>[click to expand]</em></p>
+<ul>
+<li>This exercise will help small groups build collective intelligence by giving mutual support to their projects; <a href="https://github.com/enspiral/handbook/tree/d3234f4c1fe3afc87e5231beeb2d3926aee696d2/guides/project_kitchen.html">see here</a></li>
+</ul>
+<p><strong>Case Clinic</strong> - From Theory U <em>[click to expand]</em></p>
+<ul>
+<li>Similar to the Project Kitchen with some different nuances and perhaps a broader scope (but each can be modified in length or content to suit your pod). Case Clinic is best suited to groups with a stronger focus on personal-professional development; <a href="https://www.collaboratiohelvetica.ch/blog/2017/11/20/mmrb05mfc3nlnxfqw2r9pcq26ietjp">see here</a>.</li>
+</ul>
+<p><a href="https://docs.google.com/document/d/1j-PBG42a54bTrpI9dlF0BxAq55FcFTS8sgibEkKOCxk/edit#"><strong>Peer Action Learning</strong></a> - These sessions can be simply defined as ‘learning by… <em>[click to expand]</em> sharing real challenges with others.’</p>
+<ul>
+<li>These sessions can be simply defined as ‘learning by sharing real challenges with others.’ This process allows participants to address real and immediate challenges they face… <a href="https://docs.google.com/document/d/1j-PBG42a54bTrpI9dlF0BxAq55FcFTS8sgibEkKOCxk/edit#">Learn to run Peer Action Learning (click here)</a>.</li>
+</ul>
+<p><strong>Music and movement (opening)</strong> - Connect with the body, tunefully, to get started <em>[click to expand]</em></p>
+<ul>
+<li>One person chooses some music, hits play, and people 🎵 "do a little dance…" 🎵 for a few minutes to get present, allowing the group to better get started together.</li>
+</ul>
+<p><strong>Presence in silence (opening)</strong> - Hold a moment of silence at the beginning of a call <em>[click to expand]</em></p>
+<ul>
+<li>Life can be hectic and participant may have rushed into the call with stress and other thoughts in mind. Keeping silent for a few minutes (even just 1) can help ground everyone into the moment and improve the capacity of immediacy of the participants.</li>
+</ul>
+<p><strong>Showing up with a treasure</strong> - Join the meeting with a physical object... <em>[click to expand]</em></p>
+<ul>
+<li>It could have intrinsic subjective value or be anything helping you illustrate a short story that is important to you. Presenting it during the opening of the call can yield multiple benefits, starting with remembering ourselves what it is we treasure in life, practising storytelling and giving an opportunity to other pod members to get to know you.</li>
+</ul>
+<p><strong>Share and tell</strong> - Share stuff you’re proud of (or fascinated with) and dialogue <em>[click to expand]</em></p>
+<ul>
+<li>This is an invitation for folks to first and foremost share something they’ve produced or they’re proud of, and then (if not that) secondarily anything that’s inspired them, that fascinates them, or may support insights for (members of) the group or good dialogue.</li>
+</ul>
+<p><strong>Retrospective</strong> - Reflecting, periodically, for continuous improvement <em>[click to expand]</em></p>
+<ul>
+<li><a href="https://www.atlassian.com/team-playbook/plays/retrospective">This simple Retro format</a> covers the very basics. You can find a variety of options in this <a href="http://retrospectivewiki.org/index.php?title=Agile_Retrospective_Resource_Wiki">directory of retro formats</a> (including the <a href="http://retrospectivewiki.org/index.php?title=Four_L%27s_Retrospective">4 L’s</a>)</li>
+</ul>
+<p><strong>A few other basic rituals,</strong> such as check ins (one of the most used!) can be found in our handy guide, <a href="https://handbook.enspiral.com/guides/workshop_patterns.html">Workshop patterns</a>.</p>
+<h3 id="rituals-for-initiating"><a class="header" href="#rituals-for-initiating">Rituals for initiating</a></h3>
+<p><strong>3 conversations</strong> - Three conversations for initiating a group <em>[click to expand]</em></p>
+<ol>
+<li>How do we want to interact together? What’s the intention – or the outcomes or experiences that are hoped for – of our meetings?
+<ul>
+<li>a. You can ask things like, ‘what would be wildly ideal’ and ‘what would spoil this for you’... exploring the extremes of what would be good for each individual can help you create healthy boundaries and expectations for the group</li>
+</ul>
+</li>
+<li>What recurring meeting time could work for us?
+<ul>
+<li>a. having a concrete cadence, not having to find a time again and again, has a big impact on your group’s chances!</li>
+</ul>
+</li>
+<li>What are folks ready to commit to?
+<ul>
+<li>a. This is the culminating question of the previous two explorations, and also gives people a concrete sense of ownership and dedication to the plan you laid out</li>
+<li>b. It’s helpful if the commitment question includes a proposal of a duration—at the end of which you’ll have a retrospective or group reflection—in addition to the intention and cadence</li>
+</ul>
+</li>
+</ol>
+<p><strong>Survey of Interest</strong> - Find alignment and participants <em>[click to expand]</em></p>
+<ul>
+<li>One way to easily gather the ideal mix of participants is to use a survey. This can also help a group to find or strengthen its shared intention or to choose rituals/ format. You can take advantage of <a href="http://tiny.cc/peerincubator">this template survey</a> of interest which can help your pod illuminate its shared intention; you might include this in your invitation to track who is saying yes.</li>
+</ul>
+<h2 id="additional-resources"><a class="header" href="#additional-resources">Additional resources</a></h2>
+<p>🎙 A <a href="https://www.youtube.com/watch?v=c5TXH_pMxm4&amp;list=PLH4jIJHXyh2Gq6mgD4MwJ8Q4VLhK2DZEp&amp;index=16">conversation about Pods</a> with Nati Lombardo</p>
+<p>📼 Watch John Gieryn and former Pod Working Group member Nancy Gibson <a href="https://www.youtube.com/watch?v=b9N_V0L989s">present on pods</a> at the 2020 Impact Unconference, Aotearoa NZ</p>
+<p>🔊 Listen to Nati Lombardo and John Gieryn <a href="https://anchor.fm/Microsolidarity/episodes/Discussion-about-Crews-at-Enspiral-Summer-Retreat-2019-e3ae9r">share their experiences and explain further</a> the ideas in this guide (you might also like this <a href="https://anchor.fm/Microsolidarity/episodes/Nati-and-john-talking-about-pods-at-Enspiral-e9giqj">update 6 months later</a>)</p>
+<p>📜 Find additional formats and rituals <a href="https://www.microsolidarity.cc/crewing">on the Microsolidarity site</a>.</p>
+<p>🕸 Read Michal Korzonek's reflections about <a href="https://michalkorzonek.com/microsolidarity-journey">Microsolidarity Journey and experimenting with pods</a>.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../guides/ops_processes.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../guides/project_kitchen.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../guides/ops_processes.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../guides/project_kitchen.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
