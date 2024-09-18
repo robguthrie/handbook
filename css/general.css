@@ -2,10 +2,17 @@
 
 @import 'variables.css';
 
+
 :root {
     /* Browser default font-size is 16px, this way 1 rem = 10px */
     font-size: 62.5%;
     color-scheme: var(--color-scheme);
+    font-family: Inter, sans-serif;
+    font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome */
+}
+
+@supports (font-variation-settings: normal) {
+  :root { font-family: InterVariable, sans-serif; }
 }
 
 html {
